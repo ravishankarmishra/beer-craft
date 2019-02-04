@@ -1,0 +1,119 @@
+.home-container{
+    margin-top:60px;
+    padding: 25px;
+}
+.search-box{
+    padding:30px;
+    text-align: center;
+}
+.cart-count{
+    margin-top: -70px;
+    position: sticky;
+    z-index: 20;
+    float: right;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 21px;
+}
+.search-box > input{
+    width:65%;
+    padding: 0 20px;
+    color: #29627e;
+    font-size: 25px;
+    height: 46px;
+    border: none;
+    border-radius: 5px;
+    font-family: raleway;
+}
+.search-box > button{
+    width:35%;
+}
+.beer{
+    height: 250px;;
+}
+.beer-titles{
+    text-align: center;
+}
+.beer-card{
+    width:25%;
+    display:inline-block;
+    border: .5px solid;
+    margin: 10px;
+    height: 100px;
+    vertical-align: middle;
+    padding: 10px;
+}
+.beer-deails{
+    width: 33%;
+    float: right;
+    text-align: left;
+    padding:10px 30px;
+    line-height: 1.5;
+}
+.filter{
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:70px;
+    font-size: 25px;
+}
+.filters{
+    padding-right:15px;
+}
+select{
+    color: #29627e;
+    font-size: 25px;
+    height: 46px;
+    border: none;
+    border-radius: 5px;
+    font-family: raleway;
+    background: #fff
+}
+
+@media screen and (max-width: 768px){
+    .beer-card{
+        width:90%;
+        height: 70px;
+    }
+    .beer-deails{
+        width: 95%;
+        padding:0;
+    }
+    .beer{
+        padding-bottom: 0;
+    }
+    .search-box{
+        padding:0;
+    }
+    .search-box > input{
+        width:80%;
+        font-size: 20px;
+    }
+    .filter{
+        font-size: 15px;
+    }
+    .filters{
+        padding-right:0;
+    }
+    select{
+        font-size: 13px;
+        height: 30px;
+    }
+    .only-desktop{
+        display:none;
+    }
+}
+@media screen and (max-width: 374px){
+    select{
+        font-size: 8px;
+        height: 24px;
+    }
+}
+
+.limited-text{
+  width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:inline-block;
+}

@@ -1,0 +1,40 @@
+<div class="home-container">
+    <span aria-label="CartCount" class="cart-count"><img src="https://img.icons8.com/android/24/000000/shopping-cart.png">{{itemCount}}</span>
+
+  <form>
+    <div aria-label="search-box" class="search-box">
+      <input [(ngModel)]="searchText" placeholder="Know your beer..." name="search"><br><br>
+    </div>
+    <div aria-label="filter" class="filter">
+      <span class="filters" aria-label="language-filters">
+        Beer Style
+      </span>
+        <select [(ngModel)]="beerStyle" name="Style" placeholder="Style">
+          <option *ngFor="let style of styles" [ngValue]="style">
+            {{style}}
+          </option>
+        </select>
+      
+    </div>
+  </form>
+  <div aria-label="beer-titles" class="beer-titles">
+    <div *ngFor="let beer of beerDetail | filter : searchText : beerStyle">
+      <div class="beer">
+        <div class="beer-card">
+          <h1 class="limited-text">{{beer.name}}</h1>
+        </div>
+        <div aria-label="beer-deails" class="beer-deails">
+          <strong>Style:</strong> {{beer.style}}<br>
+          <strong>abv:</strong> {{beer.abv}}<br>
+          <strong>IBU:</strong> {{beer.ibu}}<br>
+          <strong>Ounces:</strong> {{beer.ounces}}<br>
+          <strong>Id:</strong> {{beer.id}}<br>
+          <button (click)="addItemtoCart()">Add to cart</button>
+          <button (click)="removefromCart()">Remove from cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
